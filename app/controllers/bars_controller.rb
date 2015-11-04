@@ -1,4 +1,15 @@
-class BarsController < ApplicationController
+class BarsController < ApplicationController  
+  
+  def destroy
+    Bar.find(params[:id]).destroy
+    flash[:success] = "Bar Deleted"
+    redirect_to bars_url
+  end
+
+  def index
+    @bars = Bar.paginate(page: params[:page])
+  end
+
   def show
     @bar = Bar.find(params[:id])
   end

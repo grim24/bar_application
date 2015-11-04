@@ -1,0 +1,15 @@
+<% provide(:title, 'All Bars') %>
+<h1>All Bars</h1>
+
+<%= will_paginate %>
+
+<ul class="bars">
+  <% @bars.each do |bar| %>
+    <%= render bar %>
+  <% end %>
+</ul>
+
+<%= will_paginate %>
+
+
+
