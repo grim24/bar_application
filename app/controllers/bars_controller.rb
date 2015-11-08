@@ -21,8 +21,8 @@ class BarsController < ApplicationController
   def create
     @bar = Bar.new(bar_params)
     if @bar.save
-      flash[:success] = "Succesfully added Bar!"
       redirect_to @bar
+      flash[:success] = "Succesfully added Bar!"
     else
       render 'new'
     end
