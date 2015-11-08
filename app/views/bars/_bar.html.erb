@@ -1,4 +1,5 @@
 <li>
 <%= link_to bar.name, bar %>
-<%= link_to "delete", bar, method: :delete,data: { confirm: "You sure?" } %> 
+ | <%= link_to "Edit", edit_bar_path(bar) %>
+ | <%= link_to "Delete", bar, method: :delete,data: { confirm: "You sure?" } %> 
 </li>
