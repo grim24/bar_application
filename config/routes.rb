@@ -9,7 +9,8 @@ Rails.application.routes.draw do
 
   get 'new_bar' => 'bars#new'
 
-  resources :bars
+  resources :bars 
+  resources :deals,     only: [:create, :destroy] 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

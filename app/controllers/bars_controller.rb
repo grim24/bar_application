@@ -12,10 +12,13 @@ class BarsController < ApplicationController
 
   def show
     @bar = Bar.find(params[:id])
+    @deals = @bar.deals
+    @deal = @bar.deals.build
   end
 
   def new
     @bar = Bar.new
+    @deal = @bar.deals.build
   end
 
   def create

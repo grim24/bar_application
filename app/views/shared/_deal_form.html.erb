@@ -1,0 +1,13 @@
+<%= form_for(@deal) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.hidden_field :bar_id , :value=>@bar.id %>
+    </br>
+    <%= f.label :day%>
+    <%= f.text_area :day%>
+    <%= f.label :info%>
+    <%= f.text_area :content%>
+  </div>
+
+  <%= f.submit "Add Deal", class: "btn btn-primary" %>
+<% end %>
