@@ -1,14 +1,14 @@
 <% provide(:title, 'All Bars') %>
 <h1>All Bars</h1>
-
+<div class="text-right">
+  <%= link_to "Add Bar", new_bar_path, class: "btn btn-sm btn-primary" %>
+</div>
 <%= will_paginate %>
-
 <ul class="bars">
   <% @bars.each do |bar| %>
     <%= render bar %>
   <% end %>
 </ul>
-
 <%= will_paginate %>
 
 
