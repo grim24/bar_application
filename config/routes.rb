@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   get 'new_bar' => 'bars#new'
 
+  resources :users
   resources :bars 
   resources :deals,     only: [:create, :destroy] 
 
