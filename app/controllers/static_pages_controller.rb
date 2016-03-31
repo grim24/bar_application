@@ -10,4 +10,9 @@ class StaticPagesController < ApplicationController
   
   def contact 
   end
+  
+  def json
+    @bars = Bar.paginate(page: params[:page])
+    render json: @bars
+  end
 end

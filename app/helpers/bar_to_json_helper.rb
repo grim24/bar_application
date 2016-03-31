@@ -1,0 +1,2 @@
+module BarToJsonHelper
+end

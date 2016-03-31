@@ -8,6 +8,10 @@ class BarsController < ApplicationController
 
   def index
     @bars = Bar.paginate(page: params[:page])
+    respond_to do |format|
+      format.html {  }
+      format.json { render json: @bars }
+    end
   end
 
   def show

@@ -1,6 +1,20 @@
 Rails.application.routes.draw do
 
 
+  get 'bar_to_json/new'
+
+  get 'bar_to_json/create'
+
+  get 'bar_to_json/update'
+
+  get 'bar_to_json/edit'
+
+  get 'bar_to_json/destroy'
+
+  get 'bar_to_json/show'
+
+  get 'bar_to_json/index'
+
   get 'sessions/new'
 
   get 'signup' => 'users#new'
@@ -8,6 +22,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
 
   get 'help' =>  'static_pages#help'
+  get 'json' => 'static_pages#json'
   get 'about' =>  'static_pages#about'
   get 'contact' =>  'static_pages#contact'
 
@@ -19,6 +34,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :bars 
+  resources :bar_to_json
   resources :deals,     only: [:create, :destroy] 
 
   # The priority is based upon order of creation: first created -> highest priority.
