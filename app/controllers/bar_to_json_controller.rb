@@ -12,7 +12,6 @@ class BarToJsonController < ApplicationController
   def show
     @bar = Bar.find(params[:id])
     @deals = @bar.deals
-    @deal = @bar.deals.build
     render json: @deals 
   end
 
